@@ -208,15 +208,6 @@ const About = () => {
 
             {showMoreLegacy && (
               <p className="font-ABeeZee text-gray-600 text-base md:text-lg leading-7 md:leading-8">
-                {/* A large part of Arjun’s life has been spent in the United States,
-                where he went immediately after finishing his schooling in
-                Delhi. At the University of the South in Sewanee, Tennessee,
-                Arjun studied English Literature and Drama and graduated with
-                honors. His twin passions (food and theater) came to the
-                forefront in New York, where he went after graduation. From that
-                time onwards, he became associated with some of New York’s
-                finest restaurants as a serving person which automatically gave
-                him access to the kitchen and truly American cuisine. */}
                 Arjun’s culinary philosophy naturally extended into Sunny’s In A Bottle, 
                 created to bring the restaurant’s signature flavours into everyday kitchens.
                  Inspired by years of crafting honest, ingredient-forward food,

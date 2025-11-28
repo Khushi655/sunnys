@@ -21,9 +21,10 @@ const Footer = () => {
           </h2>
 
           <p className="text-[#525252] leading-[22px] text-[15px]">
-            At our Bridge to Hassle-Free Assistance, we prioritize your peace
-            of mind and satisfaction. With a commitment to excellence, our
-            dedicated team is here for you.
+            Take the legendary taste home. 
+          </p>
+          <p className="text-[#525252] leading-[22px] text-[15px]">
+            Taste-Tested. Guest-Approved. 
           </p>
         </div>
 
@@ -39,13 +40,17 @@ const Footer = () => {
             Karnataka – 560025
           </p>
 
-          {/* Email */}
-          <div className="flex items-center gap-2 mb-2">
-            <MdEmail className="text-[#2F820C]" />
-            <a href="mailto:sunnysandmore@yahoo.com" className="text-[#525252]">
-              sunnysandmore@yahoo.com
-            </a>
-          </div>
+         {/* Email */}
+<div className="flex items-center gap-2 mb-2 max-w-full">
+  <MdEmail className="text-[#2F820C] flex-shrink-0" />
+  <a
+    href="mailto:sunnysandmore@yahoo.com"
+    className="text-[#525252] whitespace-nowrap text-sm sm:text-base"
+    style={{ overflow: "hidden", textOverflow: "ellipsis" }}
+  >
+    sunnysandmore@yahoo.com
+  </a>
+</div>
 
           {/* Phone */}
           <div className="flex items-center gap-2">

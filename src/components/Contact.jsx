@@ -201,6 +201,7 @@
 
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -211,6 +212,7 @@ const Contact = () => {
     postalCode: "",
     file: null,
   });
+  const navigate = useNavigate();
 
   function changeHandler(event) {
     const { name, value, files, type } = event.target;
@@ -259,11 +261,12 @@ const Contact = () => {
     <div className="flex flex-col items-center py-16 px-6 bg-[#FDF2D2] min-h-screen">
       {/* Heading */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#FF5203] font-jockey text-center leading-tight">
-        WE'RE HERE FOR YOU
+        LET’S TALK FLAVOUR
       </h1>
 
       <p className="text-center text-gray-600 mt-3 mb-10 text-base sm:text-lg max-w-xl">
-        Please complete the form so we can best help out.
+       Got a question, craving, or collaboration idea? We’d love to hear from you. At Sunny’s in a Bottle, 
+       we’re all about conversations that start with food and end with smiles.
       </p>
 
       {/* Form */}
@@ -365,6 +368,16 @@ const Contact = () => {
           </button>
         </div>
       </form>
+       <p className="text-center text-gray-600 mt-10 mb-4 text-base sm:text-lg max-w-xl">
+       Bring Sunny’s home. Bring the flavour home.
+      </p>
+      <button
+  onClick={() => navigate("/products")}
+  className="mt-2 px-6 py-2 border-2 border-[#FF5203] text-[#FF5203] rounded-2xl hover:bg-[#FF5203] hover:text-white transition flex items-center gap-2"
+>
+  Shop Now
+</button>
+
     </div>
   );
 };

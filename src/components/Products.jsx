@@ -463,7 +463,9 @@ import ProdutHero from "../assets/home04.jpg";
 import greek from "../assets/GREEK.webp";
 import garlic from "../assets/FRENCH VINAIGRETTE.webp";
 import thai from "../assets/GINGER.webp";
-import balsamic from "../assets/SRIRACHA.webp";
+import sriracha from "../assets/SRIRACHA.webp";
+import balsamic from "../assets/BALSAMIC.png"; 
+import garlicvin from "../assets/GARLIC VINAIGRETTE.png";
 import illustration from "../assets/illustrationProduc.png";
 import productbg from "../assets/Group 7.png";
 import { FaArrowRight } from "react-icons/fa";
@@ -471,22 +473,21 @@ import { HiLocationMarker } from "react-icons/hi";
 
 const products = [
   {
-    name: "GREEK",
+   name: "BALSAMIC VINAIGRETTE",
+   shortDesc: "Relish the warmth and nostalgia of home-cooked meals.",
+   fullDesc:
+     "Rich, tangy, and fruity with a boutique flair. Perfect for elevating salads, grilled meats, or roasted vegetables. Also works wonderfully drizzled over fresh mozzarella, strawberries, or grilled chicken for an instant touch of sophistication.",
+   img:balsamic,
+   quantity: "150ml",
+   price: 250,
+  },
+  {
+    name: "GARLIC VINAIGRETTE",
     shortDesc:
       "A harmonious blend of olive oil, garlic and lemon, perfect for salads.",
     fullDesc:
-      "A harmonious blend of olive oil, garlic and lemon, that brings the flavours of the Aegean to the table. It is used mainly in salads, but the dressing can be used with great effect in grilled vegetables, and anywhere you need to add its particular piquant flavour.",
-    img: greek,
-    quantity: "150ml",
-    price: 250,
-  },
-  {
-    name: "THAI GINGER",
-    shortDesc:
-      "Lemon and ginger create an Asian-inspired vegetarian salad dressing.",
-    fullDesc:
-      "A refreshing take on the combination of lemon and ginger, the dressing imparts great flavours to create an Asian inspired salad. It is made without fish sauce, to keep it vegetarian.",
-    img: thai,
+      "A golden trio of sunflower oil, Dijon mustard, and garlic — reimagined. Perfect on fresh vegetarian salads, and when whisked with a little mayo, it turns into the ultimate base for seafood or chicken salads. Versatile, zesty, and unapologetically flavourful.",
+    img: garlicvin,
     quantity: "150ml",
     price: 250,
   },
@@ -494,20 +495,41 @@ const products = [
     name: "FRENCH VINAIGRETTE",
     shortDesc: "Classic sunflower oil, Dijon mustard, and garlic combination.",
     fullDesc:
-      "A variation of the classic refined sunflower oil, Dijon mustard and garlic combination. Great for vegetarian salads and as a base for seafood/chicken salads.",
+      "Bright, complex, and effortlessly chic. This dressing does it all — from salads and sandwiches to marinades for chicken and vegetables. A true showstopper when paired with avocado or fresh fruits. Think Parisian flair in every drizzle.",
     img: garlic,
     quantity: "150ml",
     price: 250,
   },
   {
-    name: "BALSAMIC",
-    shortDesc: "Relish the warmth and nostalgia of home-cooked meals.",
+    name: "THAI GINGER DRESSING",
+    shortDesc:
+      "Lemon and ginger create an Asian-inspired vegetarian salad dressing.",
     fullDesc:
-      "Perfect for enhancing flavor in your salads, vegetables, and grilled dishes.",
-    img: balsamic,
+      "Lemon and ginger, refreshed and redefined. This Asian-inspired dressing is vegetarian-friendly (no fish sauce) but bold in flavour, pairing beautifully with both greens and proteins. Bonus: it’s a secret weapon on fresh fruit that isn’t naturally sweet.",
+    img: thai,
     quantity: "150ml",
     price: 250,
   },
+  {
+    name: "SRIRACHA CHILI SAUCE",
+    shortDesc: "Relish the warmth and nostalgia of home-cooked meals.",
+    fullDesc:
+      "Fiery, tangy, and perfectly tuned to the Indian palate. Made with fresh red jalapeños, sugar, vinegar, and garlic, it’s that addictive sweet-sour-salty kick every dish craves. From stir-fries to sandwiches, this is the flavour bomb you’ll reach for again and again.",
+    img: sriracha,
+    quantity: "150ml",
+    price: 250,
+  },
+  {
+    name: "GREEK DRESSING & MARINADE",
+    shortDesc:
+      "A harmonious blend of olive oil, garlic and lemon, perfect for salads.",
+    fullDesc:
+      "A piquant blend of olive oil, garlic, and lemon. Bright, zesty, and fresh, it’s the easiest way to bring authentic Mediterranean flavour to salads, feta, olives, or grilled veggies and chicken.",
+    img: greek,
+    quantity: "150ml",
+    price: 250,
+  },
+
 ];
 
 const stores = [
@@ -534,6 +556,15 @@ const ProductPage = () => {
       detailsRef.current?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
+
+  const prevProduct = () => {
+  setSelectedIndex((prev) =>
+    prev === 0 ? products.length - 1 : prev - 1
+  );
+  setTimeout(() => {
+    detailsRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, 100);
+};
 
   const nextProduct = () => {
     setSelectedIndex((prev) => (prev + 1) % products.length);
@@ -568,10 +599,10 @@ const ProductPage = () => {
               className="w-full h-52 sm:h-64 object-contain mx-auto mb-2"
             />
             <h3 className="inter font-medium">{product.name}</h3>
-            <div className="flex items-center justify-center gap-1 text-sm text-[#FF5203] font-medium mt-2">
+            {/* <div className="flex items-center justify-center gap-1 text-sm text-[#FF5203] font-medium mt-2">
               <span>Know More</span>
               <FaArrowRight size={12} />
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
@@ -583,7 +614,7 @@ const ProductPage = () => {
           style={{ backgroundImage: `url(${productbg})` }}
         >
           {/* LEFT TEXT */}
-          <div className="flex-1">
+          <div className="flex-1 pl- sm:pl-6 md:pl-16">
             <h2 className="text-xl sm:text-2xl font-bold mb-4">
               {products[selectedIndex].name}
             </h2>
@@ -613,6 +644,14 @@ const ProductPage = () => {
               />
             </div>
           </div>
+{/* PERVIOUS BUTTON */}
+   <button
+  onClick={prevProduct}
+  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white rounded-full shadow hover:bg-gray-100 rotate-180"
+>
+  <FaArrowRight />
+</button>
+
 
           {/* NEXT BUTTON */}
           <button

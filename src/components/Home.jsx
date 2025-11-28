@@ -252,7 +252,7 @@ import img4 from "../assets/home03.jpg";
 
 import bottles from "../assets/bottles.png";
 
-import choose1 from "../assets/choose1.webp";
+import choose1 from "../assets/fresh.png";
 import choose2 from "../assets/choose2.webp";
 import choose3 from "../assets/choose3.webp";
 import choose4 from "../assets/choose4.webp";
@@ -267,42 +267,46 @@ const Home = () => {
   const features = [
     {
       img: choose1,
-      title: "Fresh Ingredients",
-      desc: "We choose only the freshest and most authentic ingredients, sourced locally. Keeping the farm to fork time as minimal as possible.",
+      title: "FRESH INGREDIENTS",
+      desc: "Fresh, natural, and locally grown for the best taste.",
     },
     {
       img: choose2,
       title: "GLUTEN FREE",
-      desc: "Our products are gluten free, if that's the choice you make.",
+      desc: "Indulgence without compromise.",
     },
     {
       img: choose3,
       title: "ALL NATURAL",
-      desc: "We use only the most authentic natural ingredients, with no artificial enhancers, colours or emulsifiers.",
+      desc: "We use nature,authentic and fresh ingredients.",
     },
     {
       img: choose4,
       title: "NO PRESERVATIVES",
-      desc: "Our range has no artificial flavours, no preservatives. Ensuring they are what they say they are.",
+      desc: "Nothing artificial. Just clean, real food.",
     },
     {
       img: choose5,
       title: "VEGAN",
-      desc: "All our products are vegan, including our Classic Ceasars dressings.",
+      desc: "Plant-powered flavour for everyone at the table.",
     },
   ];
 
-  const [expandedIndex, setExpandedIndex] = useState(null);
-  const toggleExpand = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
+  const [expandedIndex] = useState(null);
+  // const toggleExpand = (index) => {
+  //   setExpandedIndex(expandedIndex === index ? null : index);
+  // };
 
   const images = [img1, img2, img3, img4];
   const [current, setCurrent] = useState(0);
-  const [showMore, setShowMore] = useState(false);
+  // const [showMore, setShowMore] = useState(false);
+
+  const prevSlide = () =>
+  setCurrent((prev) => (prev - 1 + images.length) % images.length);
+
 
   const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
-  const handleToggle = () => setShowMore(!showMore);
+  // const handleToggle = () => setShowMore(!showMore);
 
   return (
     <section className="w-full bg-[#FDF2D2] overflow-hidden">
@@ -315,9 +319,18 @@ const Home = () => {
           className="w-full h-full object-cover transition duration-700"
         />
 
+        {/* Previous Button */}
+        <button
+  onClick={prevSlide}
+  className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 p-2 rounded-full rotate-180"
+>
+  <img src={sliderArrow} className="w-6 h-6" />
+</button>
+
+
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/40 p-2 rounded-full"
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 p-2 rounded-full"
         >
           <img src={sliderArrow} className="w-6 h-6" />
         </button>
@@ -328,34 +341,36 @@ const Home = () => {
 
         {/* Left */}
         <div className="flex-1 space-y-5">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl text-gray-800 leading-tight">
-            <span className="font-medium">Fresh. Bold.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-5xl text-gray-800 leading-tight">
+            <span className="font-medium">30 Years of Sunny’s — Now in a Bottle</span>
             <br />
-            <span className="font-bold">Sunny’s</span>
           </h1>
+<h1 className="text-xl  text-gray-800 leading-tight">
+            <span className="">From Bangalore’s legendary restaurant to your kitchen table.</span>
 
+</h1>
           <p className="text-gray-700 text-base sm:text-lg">
-            What started out as a small bistro in 1995, grew into one of
-            Bengaluru's finest restaurants.
+            Chef-crafted sauces, dressings & marinades — vegan, gluten-free, preservative-free, and
+             ready to make every dish unforgettable.
           </p>
 
-          {showMore && (
+          {/* {showMore && ( */}
             <div className="text-gray-700 space-y-3 text-sm sm:text-base">
-              <p>This legendary taste is now available in bottles.</p>
-              <p>Products that one could take home and enjoy.</p>
-              <p className="font-semibold">What makes us different?</p>
-              <p>Our range is made with superior oils and fresh authentic ingredients.</p>
+              <p>Sunny’s has been a Bangalore icon for over 30 years — a place where flavour, passion, and perfection come together on every plate. Now, that same legacy lives on in Sunny’s in a Bottle.</p>
+              <p>From smoky BBQ to zesty vinaigrettes, each bottle carries chef Arjun Sajnani’s tried-and-tested recipes — crafted with real ingredients, no preservatives, and plenty of heart. Think of it as restaurant-style flavour, bottled for everyday indulgence.</p>
+              {/* <p className="font-semibold">What makes us different?</p> */}
+              {/* <p>Our range is made with superior oils and fresh authentic ingredients.</p> */}
             </div>
-          )}
+          {/* )} */}
 
-          <button
+          {/* <button
             onClick={handleToggle}
             className="mt-2 px-5 py-2 border border-[#FF5203] text-[#FF5203] rounded-xl 
             hover:bg-[#FF5203] hover:text-white transition flex items-center gap-2 
             text-sm sm:text-base"
           >
             {showMore ? "Show Less" : "Read More"} <FaArrowRight />
-          </button>
+          </button> */}
         </div>
 
         {/* Right: Bottle Section */}
@@ -379,7 +394,8 @@ const Home = () => {
           WHY CHOOSE US?
         </h2>
         <p className="text-gray-600 max-w-xl mx-auto mt-3 px-4 text-sm sm:text-base">
-          Dive into our wide range of culinary categories.
+          At Sunny’s in a Bottle, flavour is never faked. Every sauce, dressing, and marinade is crafted with honesty — using only premium, all-natural ingredients.
+         That means you get the richness of chef-tested recipes, without the junk.
         </p>
       </div>
 
@@ -406,17 +422,92 @@ const Home = () => {
                 {expandedIndex === index ? item.desc : shortDesc}
               </p>
 
-              <button
+              {/* <button
                 onClick={() => toggleExpand(index)}
                 className="text-[#FF5203] flex items-center justify-center gap-1 text-xs sm:text-sm"
               >
                 {expandedIndex === index ? "Show less" : "Read more"}{" "}
                 <FaArrowRight />
-              </button>
+              </button> */}
             </div>
           );
+          
         })}
       </div>
+      {/* About Sunny's Section - Inside Beige Background */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-3 pb-20">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 text-center">
+          From New York Beginnings to a Bangalore Legend.
+        </h2>
+        <div className="w-40 h-1 bg-[#FF5203] mx-auto my-5 rounded-full"></div>
+
+        <div className="space-y-4 text-gray-700 text-sm sm:text-base mt-6 leading-relaxed text-center">
+          <p>
+            Founded by <span className="italic font-medium">chef Arjun Sajnani</span>, whose journey began in New York
+            before shaping Bangalore’s dining culture, <span className="font-semibold italic">Sunny’s</span> became a
+            city landmark for over 30 years. Guests came for more than a meal — they came for his uncompromising
+            attention to detail, passion for quality, and dishes that felt familiar yet extraordinary.
+          </p>
+
+          <p>
+            Sunny’s in a Bottle is a celebration of flavour, convenience,
+            and culinary confidence. Crafted for everyone — from ambitious home chefs to hungry couch potatoes — our
+            gourmet-quality sauces and dressings are designed to turn everyday meals into memorable moments.
+          </p>
+
+          <p>
+            Born out of a love for bold taste and busy lives, we cut the cooking time, not the experience. Every bottle
+            packs premium ingredients, slow-simmered flavour, and a playful spirit that’s as sunny as our name.
+          </p>
+
+          <p>
+            Whether you’re plating up a dinner date, feeding the fam, or elevating your late-night snack,
+           Sunny’s in a Bottle gives you the shortcut to delicious —
+            without compromising on quality or style.
+          </p>
+
+          <p className="font-semibold italic text-center text-lg mt-4">
+            Sunny’s in a Bottle — Your new kitchen flex
+          </p>
+        </div>
+      </div>
+
+            {/* Serving Suggestions Section */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-2 pb-24">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 text-center">
+          Serving Suggestions
+        </h2>
+
+        <div className="w-20 h-1 bg-[#FF5203] mx-auto my-5 rounded-full"></div>
+
+        {/* Header subline */}
+        <p className="text-center font-medium text-gray-800 text-base sm:text-base mt-2">
+          Pour. Toss. Marinate. Create.
+        </p>
+
+        {/* Body Copy */}
+        <p className="text-gray-700 text-sm sm:text-base mt-6 leading-relaxed text-center">
+          <span className="italic font-semibold">Sunny’s in a Bottle</span> &nbsp;isn’t just about sauces — it’s about sparking
+          creativity in your kitchen. From quick weekday fixes to indulgent weekend spreads, our dressings, marinades,
+          and sauces make it easy to cook, share, and impress.
+        </p>
+
+        {/* Bullet List */}
+        <ul className="text-gray-700 text-sm sm:text-base mt-6 space-y-2 max-w-2xl mx-auto ">
+          <li>— <span className="font-medium">Quick Fixes</span> → Upgrade your snacks and salads in seconds.</li>
+          <li>— <span className="font-medium">Dinner Upgrades</span> → Turn pastas, pizzas, and grilled veggies into gourmet moments.</li>
+          <li>— <span className="font-medium">Party Tricks</span> → Marinades, dips, and drizzles that guarantee applause.</li>
+        </ul>
+
+        <p className="text-center text-gray-800 font-medium italic text-lg mt-10">
+          With <span className="font-semibold">Sunny’s</span>, every bottle is an invitation to play with flavour.
+        </p>
+
+        <p className="text-center font-semibold text-gray-900 text-base sm:text-lg mt-4">
+          Your recipe? Just add Sunny’s
+        </p>
+      </div>
+
 
     </section>
   );
