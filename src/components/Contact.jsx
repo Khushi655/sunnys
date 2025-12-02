@@ -373,7 +373,7 @@ const Contact = () => {
       </p>
       <button
   onClick={() => navigate("/products")}
-  className="mt-2 px-6 py-2 border-2 border-[#FF5203] text-[#FF5203] rounded-2xl hover:bg-[#FF5203] hover:text-white transition flex items-center gap-2"
+  className="mt-2 px-6 py-2 border-2 border-[#FF5203] text-[#FF5203] hover:bg-[#FF5203] hover:text-white transition flex items-center gap-2 rounded-md"
 >
   Shop Now
 </button>
