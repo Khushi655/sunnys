@@ -645,21 +645,22 @@ const ProductPage = () => {
             </div>
           </div>
 {/* PERVIOUS BUTTON */}
-   <button
+   {/* PREV BUTTON */}
+<button
   onClick={prevProduct}
-  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white rounded-full shadow hover:bg-gray-100 rotate-180"
+  className="absolute left-2 sm:left-4 top-[55%] sm:top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white rounded-full shadow hover:bg-gray-100 rotate-180"
 >
   <FaArrowRight />
 </button>
 
+{/* NEXT BUTTON */}
+<button
+  onClick={nextProduct}
+  className="absolute right-2 sm:right-4 top-[55%] sm:top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white rounded-full shadow hover:bg-gray-100"
+>
+  <FaArrowRight />
+</button>
 
-          {/* NEXT BUTTON */}
-          <button
-            onClick={nextProduct}
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white rounded-full shadow hover:bg-gray-100"
-          >
-            <FaArrowRight />
-          </button>
         </div>
 
         {/* STORE HEADING */}
