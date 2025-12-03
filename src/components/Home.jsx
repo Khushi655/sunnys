@@ -251,8 +251,6 @@ import img3 from "../assets/home02.jpg";
 import img4 from "../assets/home03.jpg";
 
 import bottles from "../assets/bottles.png";
-
-import choose1 from "../assets/fresh.png";
 import choose2 from "../assets/choose2.webp";
 import choose3 from "../assets/choose3.webp";
 import choose4 from "../assets/choose4.webp";
@@ -266,11 +264,6 @@ import { FaArrowRight } from "react-icons/fa";
 const Home = () => {
   const features = [
     {
-      img: choose1,
-      title: "FRESH INGREDIENTS",
-      desc: "Fresh, natural, and locally grown for the best taste.",
-    },
-    {
       img: choose2,
       title: "GLUTEN FREE",
       desc: "Indulgence without compromise.",
@@ -278,7 +271,7 @@ const Home = () => {
     {
       img: choose3,
       title: "ALL NATURAL",
-      desc: "We use nature,authentic and fresh ingredients.",
+      desc: "All natural authentic, locally and fresh ingredients.",
     },
     {
       img: choose4,
@@ -342,7 +335,7 @@ const Home = () => {
         {/* Left */}
         <div className="flex-1 space-y-5">
           <h1 className="text-4xl sm:text-5xl md:text-5xl text-gray-800 leading-tight">
-            <span className="font-medium">30 Years of Sunny’s — Now in a Bottle</span>
+            <span className="font-medium"><span className="text-4xl sm:text-5xl font-semibold text-gray-800">30 Years of Sunny’s</span>  Now in a Bottle</span>
             <br />
           </h1>
 <h1 className="text-xl  text-gray-800 leading-tight">
@@ -361,16 +354,6 @@ const Home = () => {
               {/* <p className="font-semibold">What makes us different?</p> */}
               {/* <p>Our range is made with superior oils and fresh authentic ingredients.</p> */}
             </div>
-          {/* )} */}
-
-          {/* <button
-            onClick={handleToggle}
-            className="mt-2 px-5 py-2 border border-[#FF5203] text-[#FF5203] rounded-xl 
-            hover:bg-[#FF5203] hover:text-white transition flex items-center gap-2 
-            text-sm sm:text-base"
-          >
-            {showMore ? "Show Less" : "Read More"} <FaArrowRight />
-          </button> */}
         </div>
 
         {/* Right: Bottle Section */}
@@ -382,7 +365,7 @@ const Home = () => {
           />
           <img
             src={arrow}
-            className="absolute -right-5 sm:-right-10 top-10 w-16 sm:w-24 rotate-12"
+            className="absolute -right-10 sm:-right-10 md:-right-2 top-16 w-14 sm:w-20 md:w-24 rotate-12"
             alt="arrow"
           />
         </div>
@@ -394,13 +377,13 @@ const Home = () => {
           WHY CHOOSE US?
         </h2>
         <p className="text-gray-600 max-w-xl mx-auto mt-3 px-4 text-sm sm:text-base">
-          At Sunny’s in a Bottle, flavour is never faked. Every sauce, dressing, and marinade is crafted with honesty — using only premium, all-natural ingredients.
+          At Sunny’s in a Bottle, flavour is never faked. Every sauce, dressing, and marinade is crafted with honesty - using only premium, all natural ingredients.
          That means you get the richness of chef-tested recipes, without the junk.
         </p>
       </div>
 
       {/* Feature Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 px-4 sm:px-10 mt-12 pb-20">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4 sm:px-10 mt-12 pb-20">
         {features.map((item, index) => {
           const shortDesc =
             item.desc.split(" ").slice(0, 10).join(" ") +
@@ -421,14 +404,6 @@ const Home = () => {
               <p className="text-gray-600 text-xs sm:text-sm px-2">
                 {expandedIndex === index ? item.desc : shortDesc}
               </p>
-
-              {/* <button
-                onClick={() => toggleExpand(index)}
-                className="text-[#FF5203] flex items-center justify-center gap-1 text-xs sm:text-sm"
-              >
-                {expandedIndex === index ? "Show less" : "Read more"}{" "}
-                <FaArrowRight />
-              </button> */}
             </div>
           );
           
@@ -444,15 +419,15 @@ const Home = () => {
         <div className="space-y-4 text-gray-700 text-sm sm:text-base mt-6 leading-relaxed text-center">
           <p>
             Founded by <span className="italic font-medium">chef Arjun Sajnani</span>, whose journey began in New York
-            before shaping Bangalore’s dining culture, <span className="font-semibold italic">Sunny’s</span> became a
-            city landmark for over 30 years. Guests came for more than a meal — they came for his uncompromising
+            before shaping Bangalore’s dining culture, Sunny’s became a
+            city landmark for over 30 years. Guests came for more than a meal - they came for his uncompromising
             attention to detail, passion for quality, and dishes that felt familiar yet extraordinary.
           </p>
 
           <p>
             Sunny’s in a Bottle is a celebration of flavour, convenience,
-            and culinary confidence. Crafted for everyone — from ambitious home chefs to hungry couch potatoes — our
-            gourmet-quality sauces and dressings are designed to turn everyday meals into memorable moments.
+            and culinary confidence. Crafted for everyone from ambitious home chefs to hungry couch potatoes — our
+            gourmet quality sauces and dressings are designed to turn everyday meals into memorable moments.
           </p>
 
           <p>
@@ -462,7 +437,7 @@ const Home = () => {
 
           <p>
             Whether you’re plating up a dinner date, feeding the fam, or elevating your late-night snack,
-           Sunny’s in a Bottle gives you the shortcut to delicious —
+           Sunny’s in a Bottle gives you the shortcut to delicious 
             without compromising on quality or style.
           </p>
 
@@ -487,17 +462,27 @@ const Home = () => {
 
         {/* Body Copy */}
         <p className="text-gray-700 text-sm sm:text-base mt-6 leading-relaxed text-center">
-          <span className="italic font-semibold">Sunny’s in a Bottle</span> &nbsp;isn’t just about sauces — it’s about sparking
+          <span className="italic font-semibold">Sunny’s in a Bottle</span> &nbsp;isn’t just about sauces - it’s about sparking
           creativity in your kitchen. From quick weekday fixes to indulgent weekend spreads, our dressings, marinades,
           and sauces make it easy to cook, share, and impress.
         </p>
 
         {/* Bullet List */}
-        <ul className="text-gray-700 text-sm sm:text-base mt-6 space-y-2 max-w-2xl mx-auto ">
-          <li>— <span className="font-medium">Quick Fixes</span> → Upgrade your snacks and salads in seconds.</li>
-          <li>— <span className="font-medium">Dinner Upgrades</span> → Turn pastas, pizzas, and grilled veggies into gourmet moments.</li>
-          <li>— <span className="font-medium">Party Tricks</span> → Marinades, dips, and drizzles that guarantee applause.</li>
-        </ul>
+        <ul className="text-gray-700 text-sm sm:text-base mt-6 space-y-2 max-w-2xl mx-auto">
+  <li>
+    <span className="text-black">•</span>&nbsp;&nbsp;
+    <span className="font-medium">Dinner Upgrades</span> → Turn pastas, pizzas, and grilled veggies into gourmet moments.
+  </li>
+  <li>
+    <span className="text-black">•</span>&nbsp;&nbsp;
+    <span className="font-medium">Quick Fixes</span> → Upgrade your snacks and salads in seconds.
+  </li>
+  <li>
+    <span className="text-black">•</span>&nbsp;&nbsp;
+    <span className="font-medium">Party Tricks</span> → Marinades, dips, and drizzles that guarantee applause.
+  </li>
+</ul>
+
 
         <p className="text-center text-gray-800 font-medium italic text-lg mt-10">
           With <span className="font-semibold">Sunny’s</span>, every bottle is an invitation to play with flavour.
