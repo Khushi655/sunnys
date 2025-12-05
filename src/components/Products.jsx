@@ -459,7 +459,7 @@
 
 import React, { useState, useRef } from "react";
 // import ProdutHero from "../assets/ProductMainImg.webp";
-import ProdutHero from "../assets/home04.jpg";
+import ProdutHero from "../assets/home4.jpg";
 import greek from "../assets/GREEK.webp";
 import garlic from "../assets/FRENCH VINAIGRETTE.webp";
 import thai from "../assets/GINGER.webp";
@@ -486,7 +486,7 @@ const products = [
     shortDesc:
       "A harmonious blend of olive oil, garlic and lemon, perfect for salads.",
     fullDesc:
-      "A golden trio of sunflower oil, Dijon mustard, and garlic — reimagined. Perfect on fresh vegetarian salads, and when whisked with a little mayo, it turns into the ultimate base for seafood or chicken salads. Versatile, zesty, and unapologetically flavourful.",
+      "A golden trio of sunflower oil, Dijon mustard, and garlic reimagined. Perfect on fresh vegetarian salads, and when whisked with a little mayo, it turns into the ultimate base for seafood or chicken salads. Versatile, zesty, and unapologetically flavourful.",
     img: garlicvin,
     quantity: "150ml",
     price: 250,
@@ -495,7 +495,7 @@ const products = [
     name: "FRENCH VINAIGRETTE",
     shortDesc: "Classic sunflower oil, Dijon mustard, and garlic combination.",
     fullDesc:
-      "Bright, complex, and effortlessly chic. This dressing does it all — from salads and sandwiches to marinades for chicken and vegetables. A true showstopper when paired with avocado or fresh fruits. Think Parisian flair in every drizzle.",
+      "Bright, complex, and effortlessly chic. This dressing does it all from salads and sandwiches to marinades for chicken and vegetables. A true showstopper when paired with avocado or fresh fruits. Think Parisian flair in every drizzle.",
     img: garlic,
     quantity: "150ml",
     price: 250,
@@ -514,7 +514,7 @@ const products = [
     name: "SRIRACHA CHILI SAUCE",
     shortDesc: "Relish the warmth and nostalgia of home-cooked meals.",
     fullDesc:
-      "Fiery, tangy, and perfectly tuned to the Indian palate. Made with fresh red jalapeños, sugar, vinegar, and garlic, it’s that addictive sweet-sour-salty kick every dish craves. From stir-fries to sandwiches, this is the flavour bomb you’ll reach for again and again.",
+      "Fiery, tangy, and perfectly tuned to the Indian palate. Made with fresh red jalapenos, sugar, vinegar, and garlic, it’s that addictive sweet-sour-salty kick every dish craves. From stir-fries to sandwiches, this is the flavour bomb you’ll reach for again and again.",
     img: sriracha,
     quantity: "150ml",
     price: 250,

@@ -264,7 +264,7 @@ const Contact = () => {
         LET’S TALK FLAVOUR
       </h1>
 
-      <p className="text-center text-gray-600 mt-3 mb-10 text-base sm:text-lg max-w-xl">
+      <p className="text-center text-gray-600 mt-3 mb-10 text-sm sm:text-lg max-w-xl">
        Got a question, craving, or collaboration idea? We’d love to hear from you. At Sunny’s in a Bottle, 
        we’re all about conversations that start with food and end with smiles.
       </p>

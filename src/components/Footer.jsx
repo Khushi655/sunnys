@@ -59,10 +59,11 @@ const Footer = () => {
           </h2>
 
           <p className="text-[#525252] text-[15px] leading-[22px] mb-3">
-            20, Paul’s Castle, Castle Street, <br />
-            Ashok Nagar, Bangalore, <br />
-            Karnataka – 560025
-          </p>
+  20, Paul’s Castle, Castle Street, Ashok Nagar <br />
+  Bangalore, Karnataka <br />
+  560025
+</p>
+
 
           {/* Email */}
    <div className="grid grid-cols-[auto_1fr] gap-2 mb-2">

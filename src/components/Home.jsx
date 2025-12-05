@@ -245,10 +245,10 @@
 
 import React, { useState, } from "react";
 
-import img1 from "../assets/home0.1.png";
-import img2 from "../assets/home01.jpg";
-import img3 from "../assets/home02.jpg";
-import img4 from "../assets/home03.jpg";
+import img1 from "../assets/Homee.jpg";
+import img2 from "../assets/home2.0.jpg";
+import img3 from "../assets/home3.0.jpg";
+import img4 from "../assets/home4.0.jpg";
 
 import bottles from "../assets/bottles.png";
 import choose2 from "../assets/choose2.webp";
@@ -257,7 +257,7 @@ import choose4 from "../assets/choose4.webp";
 import choose5 from "../assets/choose5.webp";
 
 import arrow from "../assets/arrow.png";
-import sliderArrow from "../assets/Slider.svg";
+// import sliderArrow from "../assets/Slider.svg";
 
 import { FaArrowRight } from "react-icons/fa";
 
@@ -313,20 +313,20 @@ const Home = () => {
         />
 
         {/* Previous Button */}
-        <button
-  onClick={prevSlide}
-  className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/20 p-2 rounded-full rotate-180"
->
-  <img src={sliderArrow} className="w-6 h-6" />
-</button>
+     <button
+       onClick={prevSlide}
+       className="absolute left-2 sm:left-4 top-[55%] sm:top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white rounded-full shadow hover:bg-gray-100 rotate-180"
+     >
+       <FaArrowRight />
+     </button>
 
 
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/20 p-2 rounded-full"
-        >
-          <img src={sliderArrow} className="w-6 h-6" />
-        </button>
+       <button
+         onClick={nextSlide}
+         className="absolute right-2 sm:right-4 top-[55%] sm:top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-white rounded-full shadow hover:bg-gray-100"
+       >
+         <FaArrowRight />
+       </button>
       </div>
 
       {/* Text + Bottle Section */}
@@ -338,19 +338,19 @@ const Home = () => {
             <span className="font-medium"><span className="text-4xl sm:text-5xl font-semibold text-gray-800">30 Years of Sunny’s</span>  Now in a Bottle</span>
             <br />
           </h1>
-<h1 className="text-xl  text-gray-800 leading-tight">
+<h1 className="text-base  text-gray-900 leading-tight">
             <span className="">From Bangalore’s legendary restaurant to your kitchen table.</span>
 
 </h1>
-          <p className="text-gray-700 text-base sm:text-lg">
-            Chef-crafted sauces, dressings & marinades — vegan, gluten-free, preservative-free, and
+          <p className="text-gray-700 text-sm sm:text-base">
+            Chef-crafted sauces, dressings & marinades — vegan, gluten free, preservative-free, and
              ready to make every dish unforgettable.
           </p>
 
           {/* {showMore && ( */}
             <div className="text-gray-700 space-y-3 text-sm sm:text-base">
-              <p>Sunny’s has been a Bangalore icon for over 30 years — a place where flavour, passion, and perfection come together on every plate. Now, that same legacy lives on in Sunny’s in a Bottle.</p>
-              <p>From smoky BBQ to zesty vinaigrettes, each bottle carries chef Arjun Sajnani’s tried-and-tested recipes — crafted with real ingredients, no preservatives, and plenty of heart. Think of it as restaurant-style flavour, bottled for everyday indulgence.</p>
+              <p>Sunny’s has been a Bangalore icon for over 30 years! A place where flavour, passion, and perfection come together on every plate. Now, that same legacy lives on in Sunny’s in a Bottle.</p>
+              <p>From smoky BBQ to zesty vinaigrettes, each bottle carries chef Arjun Sajnani’s tried and tested recipes — crafted with real ingredients, no preservatives, and plenty of heart. Think of it as restaurant-style flavour, bottled for everyday indulgence.</p>
               {/* <p className="font-semibold">What makes us different?</p> */}
               {/* <p>Our range is made with superior oils and fresh authentic ingredients.</p> */}
             </div>
@@ -376,7 +376,7 @@ const Home = () => {
         <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800">
           WHY CHOOSE US?
         </h2>
-        <p className="text-gray-600 max-w-xl mx-auto mt-3 px-4 text-sm sm:text-base">
+        <p className="text-gray-600 mx-auto mt-3 px-4 text-sm sm:text-base text-center max-w-3xl">
           At Sunny’s in a Bottle, flavour is never faked. Every sauce, dressing, and marinade is crafted with honesty - using only premium, all natural ingredients.
          That means you get the richness of chef-tested recipes, without the junk.
         </p>
@@ -489,7 +489,7 @@ const Home = () => {
         </p>
 
         <p className="text-center font-semibold text-gray-900 text-base sm:text-lg mt-4">
-          Your recipe? Just add Sunny’s
+          Your recipe? Just add Sunny’s.
         </p>
       </div>
 
