@@ -140,7 +140,7 @@
 
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import aboutImg from "../assets/about.jpg";
+import aboutImg from "../assets/about.webp";
 
 const About = () => {
   const [showMoreLegacy, setShowMoreLegacy] = useState(false);

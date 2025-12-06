@@ -246,9 +246,9 @@
 import React, { useState, } from "react";
 
 import img1 from "../assets/Homee.jpg";
-import img2 from "../assets/home2.0.jpg";
-import img3 from "../assets/home3.0.jpg";
-import img4 from "../assets/home4.0.jpg";
+import img2 from "../assets/home2.0.webp";
+import img3 from "../assets/home3.0.webp";
+import img4 from "../assets/home4.0.webp";
 
 import bottles from "../assets/bottles.png";
 import choose2 from "../assets/choose2.webp";

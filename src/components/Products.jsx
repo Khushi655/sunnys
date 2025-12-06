@@ -458,16 +458,30 @@
 
 
 import React, { useState, useRef } from "react";
-// import ProdutHero from "../assets/ProductMainImg.webp";
-import ProdutHero from "../assets/home4.jpg";
+// // import ProdutHero from "../assets/ProductMainImg.webp";
+// import ProdutHero from "../assets/home4.webp";
+// import greek from "../assets/GREEK.webp";
+// import garlic from "../assets/FRENCH VINAIGRETTE.png";
+// import thai from "../assets/GINGER.webp";
+// import sriracha from "../assets/SRIRACHA.webp";
+// import balsamic from "../assets/BALSAMIC.png"; 
+// import garlicvin from "../assets/GARLIC VINAIGRETTE.png";
+// import illustration from "../assets/illustrationProduc.webp";
+// import productbg from "../assets/Group 7.webp";
+// import { FaArrowRight } from "react-icons/fa";
+// import { HiLocationMarker } from "react-icons/hi";
+
+
+import ProdutHero from "../assets/homme4.webp";
 import greek from "../assets/GREEK.webp";
-import garlic from "../assets/FRENCH VINAIGRETTE.webp";
+import  garlic from "../assets/FRENCH VINAIGRETTE.webp";
 import thai from "../assets/GINGER.webp";
 import sriracha from "../assets/SRIRACHA.webp";
-import balsamic from "../assets/BALSAMIC.png"; 
+import balsamic from "../assets/BALSAMIC.png";
 import garlicvin from "../assets/GARLIC VINAIGRETTE.png";
-import illustration from "../assets/illustrationProduc.png";
-import productbg from "../assets/Group 7.png";
+import illustration from "../assets/illustrationProduc.png"
+// import illustration from "../assets/Group 8.png"
+import productbg from "../assets/Group 7.png"
 import { FaArrowRight } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 
